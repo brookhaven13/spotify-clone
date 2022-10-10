@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
 import "./App.css";
-import Login from "./Login";
+import Login from "./components/Login";
 import Player from "./Player";
 import { getTokenFromUrl } from "./spotify";
 
