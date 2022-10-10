@@ -15,7 +15,17 @@ const scopes = [
 ];
 
 export const getTokenFromUrl = () => {
-  return window.location.hash;
+  // spotify response token in url looks like http://localhost:3000/#access_token=RESPONSE_TOKEN&token_type=Bearer&expires_in=3600
+
+  return window.location.hash
+    .substring(1) // get string after hash sign(#)
+    .split("&") // get url params
+    .reduce((initial, item) => {
+      let parts = item.split("="); // ['access_token', 'RESPONSE_TOKEN']
+      initial[parts[0]] = decodeURIComponent(parts[1]);
+
+      return initial; // initial = { 'access_token': 'decoded_resp_token'}
+    }, {}); // initial values set to empty string
 };
 
 export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
