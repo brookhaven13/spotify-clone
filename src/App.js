@@ -3,7 +3,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 import "./App.css";
 import Login from "./Login";
 import Player from "./Player";
-import { getTokenFromUrl } from "./Spotify";
+import { getTokenFromUrl } from "./spotify";
 
 const spotify = new SpotifyWebApi();
 
@@ -12,7 +12,6 @@ function App() {
 
   useEffect(() => {
     const hash = getTokenFromUrl();
-
     window.location.hash = "";
     const _token = hash.access_token;
 
@@ -25,7 +24,6 @@ function App() {
       });
     }
   }, []);
-
   return <div className="app">{token ? <Player /> : <Login />}</div>;
 }
 
