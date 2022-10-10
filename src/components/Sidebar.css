@@ -1,0 +1,8 @@
+.sidebar {
+  background: #040404;
+  color: #fff;
+  flex: 20%;
+  height: 100vh;
+  min-width: 230px;
+  padding: 0 12px;
+}
