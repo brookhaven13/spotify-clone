@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 import { loginUrl } from "../spotify";
 
-const logo = require("./assets/img/spotify-logo-white.png");
+const logo = require("./../assets/img/spotify-logo-white.png");
 
 function Login() {
   return (
