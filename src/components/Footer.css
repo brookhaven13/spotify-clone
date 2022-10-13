@@ -1,5 +1,6 @@
 .footer {
-  background: #282828;
+  background: #181818;
+  border-top: 1px solid #282828;
   position: fixed;
   display: flex;
   align-items: center;
@@ -12,11 +13,34 @@
 }
 
 .footer-left {
+  color: #fff;
+  display: flex;
+  align-items: center;
   flex: 0.3;
+  gap: 20px;
+  max-width: 200px;
+}
+
+.footer-song-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-song-info > p {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.footer-album-photo {
+  height: 4rem;
+  width: 4rem;
+  object-fit: contain;
 }
 
 .footer-center {
-  color: #fff;
+  color: #aaa;
   display: flex;
   flex: 0.4;
   align-items: center;
@@ -25,6 +49,53 @@
   max-width: 300px;
 }
 
+.footer-icon {
+  cursor: pointer;
+}
+
+.footer-icon:hover {
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-icon.large {
+  color: #fff;
+  font-size: 42px;
+}
+
+.footer-icon.large:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2) !important;
+}
+
 .footer-right {
+  color: #fff;
   flex: 0.3;
+  max-width: 180px;
+  margin: 0 0.5rem 0 0;
+}
+
+.footer-right * .MuiSlider-root {
+  color: #fff;
+  height: 3px;
+}
+
+.footer-right * .MuiSlider-track {
+  height: 2px;
+}
+
+.MuiSlider-thumb:hover,
+.Mui-focusVisible {
+  width: 1rem !important;
+  height: 1rem !important;
+  box-shadow: none !important;
+}
+
+.MuiSlider-dragging .MuiSlider-track {
+  color: #1db954;
+}
+
+.MuiSlider-thumb {
+  width: 0 !important;
+  height: 0 !important;
 }
